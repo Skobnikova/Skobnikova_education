@@ -1,49 +1,40 @@
 {
-	"id": "05f4f8a1-7905-4296-b444-a3587d586cd9",
+	"id": "bfa7fa86-3d56-4c47-9486-32435507866e",
 	"name": "Hillel_Auto HW_29",
-	"timestamp": "2023-06-19T11:16:31.859Z",
+	"timestamp": "2023-06-19T12:46:33.972Z",
 	"collection_id": "27172233-f560eac1-1d40-4659-89d5-9e0bf9ac0195",
 	"folder_id": 0,
 	"environment_id": "27172233-397fefbb-f1a2-438a-8ec2-ac8e053d3515",
-	"totalPass": 11,
+	"totalPass": 10,
 	"delay": 0,
 	"persist": true,
 	"status": "finished",
-	"startedAt": "2023-06-19T11:16:27.723Z",
+	"startedAt": "2023-06-19T12:46:28.191Z",
 	"totalFail": 0,
 	"results": [
 		{
 			"id": "540a56b9-1e53-4032-a992-0be8218d8ea0",
 			"name": "Test SignUp 201",
 			"url": "https://qauto2.forstudy.space/api//auth/signup",
-			"time": 1583,
+			"time": 76,
 			"responseCode": {
-				"code": 201,
-				"name": "Created"
+				"code": 400,
+				"name": "Bad Request"
 			},
-			"tests": {
-				"SingUp Ok": true
-			},
-			"testPassFailCounts": {
-				"SingUp Ok": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
+			"tests": {},
+			"testPassFailCounts": {},
 			"times": [
-				1583
+				76
 			],
 			"allTests": [
-				{
-					"SingUp Ok": true
-				}
+				{}
 			]
 		},
 		{
 			"id": "19a021cb-f9eb-4882-9392-801b5b19fa71",
 			"name": "Test SignUp 400",
 			"url": "https://qauto2.forstudy.space/api//auth/signup",
-			"time": 56,
+			"time": 62,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -58,7 +49,7 @@
 				}
 			},
 			"times": [
-				56
+				62
 			],
 			"allTests": [
 				{
@@ -70,7 +61,7 @@
 			"id": "796a3f97-c3f2-48c8-8520-375b293d4719",
 			"name": "Test SingIn 200",
 			"url": "https://qauto2.forstudy.space/api//auth/signin",
-			"time": 533,
+			"time": 592,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -85,7 +76,7 @@
 				}
 			},
 			"times": [
-				533
+				592
 			],
 			"allTests": [
 				{
@@ -97,7 +88,7 @@
 			"id": "ad0b37df-b809-40b4-9622-8e4cc19175c8",
 			"name": "Test SingIn 400",
 			"url": "https://qauto2.forstudy.space/api//auth/signin",
-			"time": 52,
+			"time": 56,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -112,7 +103,7 @@
 				}
 			},
 			"times": [
-				52
+				56
 			],
 			"allTests": [
 				{
@@ -124,7 +115,7 @@
 			"id": "a9649c3b-ed9a-401b-89e4-23270081ca62",
 			"name": "Test ChangeDist",
 			"url": "https://qauto2.forstudy.space/api//users/settings",
-			"time": 60,
+			"time": 75,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -139,7 +130,7 @@
 				}
 			},
 			"times": [
-				60
+				75
 			],
 			"allTests": [
 				{
@@ -151,7 +142,7 @@
 			"id": "e2b3281e-578d-4f9d-8b4e-4b71debb80df",
 			"name": "Test ChangeName 200",
 			"url": "https://qauto2.forstudy.space/api//users/profile",
-			"time": 56,
+			"time": 59,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -166,7 +157,7 @@
 				}
 			},
 			"times": [
-				56
+				59
 			],
 			"allTests": [
 				{
@@ -178,7 +169,7 @@
 			"id": "5626e35d-9f42-43be-85ef-91abcf962f01",
 			"name": "Test AddCar 201",
 			"url": "https://qauto2.forstudy.space/api//cars",
-			"time": 60,
+			"time": 69,
 			"responseCode": {
 				"code": 201,
 				"name": "Created"
@@ -193,7 +184,7 @@
 				}
 			},
 			"times": [
-				60
+				69
 			],
 			"allTests": [
 				{
@@ -205,7 +196,7 @@
 			"id": "0a997871-13d6-43ed-afd1-762fa8a4d507",
 			"name": "Test AddCar 400",
 			"url": "https://qauto2.forstudy.space/api//cars",
-			"time": 53,
+			"time": 56,
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request"
@@ -220,7 +211,7 @@
 				}
 			},
 			"times": [
-				53
+				56
 			],
 			"allTests": [
 				{
@@ -231,8 +222,8 @@
 		{
 			"id": "d0ae49a8-e60c-4941-9a45-d735bf466127",
 			"name": "Test ChangeDist 200",
-			"url": "https://qauto2.forstudy.space/api//cars/98599",
-			"time": 69,
+			"url": "https://qauto2.forstudy.space/api//cars/98609",
+			"time": 71,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -247,7 +238,7 @@
 				}
 			},
 			"times": [
-				69
+				71
 			],
 			"allTests": [
 				{
@@ -259,7 +250,7 @@
 			"id": "d1ba7447-daff-4a90-b835-8b893d7f4132",
 			"name": "Test CreateExp 201",
 			"url": "https://qauto2.forstudy.space/api//expenses",
-			"time": 68,
+			"time": 72,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
@@ -274,7 +265,7 @@
 				}
 			},
 			"times": [
-				68
+				72
 			],
 			"allTests": [
 				{
@@ -283,35 +274,53 @@
 			]
 		},
 		{
-			"id": "cbeddaef-9666-4cf6-8e14-7b40bd17bc5e",
-			"name": "Test DeleteUser 200",
-			"url": "https://qauto2.forstudy.space/api//users",
-			"time": 57,
+			"id": "4172edc5-5763-4331-8303-487a0dd0ef7d",
+			"name": "Test DeleteCar 200",
+			"url": "https://qauto2.forstudy.space/api//cars/98609",
+			"time": 55,
 			"responseCode": {
 				"code": 200,
 				"name": "OK"
 			},
 			"tests": {
-				"DeleteUser Ok": true
+				"DeleteCar Ok": true
 			},
 			"testPassFailCounts": {
-				"DeleteUser Ok": {
+				"DeleteCar Ok": {
 					"pass": 1,
 					"fail": 0
 				}
 			},
 			"times": [
-				57
+				55
 			],
 			"allTests": [
 				{
-					"DeleteUser Ok": true
+					"DeleteCar Ok": true
 				}
+			]
+		},
+		{
+			"id": "cbeddaef-9666-4cf6-8e14-7b40bd17bc5e",
+			"name": "Test DeleteUser 200",
+			"url": "https://qauto2.forstudy.space/api//users/profile",
+			"time": 51,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				51
+			],
+			"allTests": [
+				{}
 			]
 		}
 	],
 	"count": 1,
-	"totalTime": 2647,
+	"totalTime": 1294,
 	"collection": {
 		"requests": [
 			{
@@ -353,6 +362,10 @@
 			{
 				"id": "d1ba7447-daff-4a90-b835-8b893d7f4132",
 				"method": "POST"
+			},
+			{
+				"id": "4172edc5-5763-4331-8303-487a0dd0ef7d",
+				"method": "DELETE"
 			},
 			{
 				"id": "cbeddaef-9666-4cf6-8e14-7b40bd17bc5e",

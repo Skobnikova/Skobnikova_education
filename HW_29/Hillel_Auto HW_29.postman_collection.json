@@ -479,6 +479,51 @@
 			"response": []
 		},
 		{
+			"name": "Test DeleteCar 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 200) {\r",
+							"    pm.test(\"DeleteCar Ok\", function () {\r",
+							"        pm.expect(jsonData.status).to.eql('ok');\r",
+							"    })\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/cars/{{carID_29}}",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"cars",
+						"{{carID_29}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Test DeleteUser 200",
 			"event": [
 				{
@@ -511,12 +556,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL_29}}/users",
+					"raw": "{{URL_29}}/users/profile",
 					"host": [
 						"{{URL_29}}"
 					],
 					"path": [
-						"users"
+						"users",
+						"profile"
 					]
 				}
 			},
