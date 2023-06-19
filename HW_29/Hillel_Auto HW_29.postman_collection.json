@@ -1,0 +1,567 @@
+{
+	"info": {
+		"_postman_id": "f560eac1-1d40-4659-89d5-9e0bf9ac0195",
+		"name": "Hillel_Auto HW_29",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27172233",
+		"_collection_link": "https://grey-resonance-658637.postman.co/workspace/New-Team-Workspace~7dd6feec-21c3-44e6-8c2b-569603e5d074/collection/27172233-f560eac1-1d40-4659-89d5-9e0bf9ac0195?action=share&creator=27172233&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Test SignUp 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 201) {\r",
+							"    pm.test(\"SingUp Ok\", function () {\r",
+							"        var jsonData = pm.response.json();\r",
+							"        // console.log(jsonData.data.userId);\r",
+							"        pm.expect(jsonData.status).to.eql('ok');\r",
+							"    })\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Anna\",\r\n  \"lastName\": \"Volkova\",\r\n  \"email\": \"{{mail_29}}\",\r\n  \"password\": \"{{pass_29}}\",\r\n  \"repeatPassword\": \"{{pass_29}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/auth/signup",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test SignUp 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 400) {\r",
+							"    pm.test(\"Login error\", function () {\r",
+							"        var jsonData = pm.response.json();\r",
+							"        // console.log(jsonData.data.userId);\r",
+							"        pm.expect(jsonData.status).to.eql('error');\r",
+							"    })\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Anna\",\r\n  \"lastName\": \"Volkova\",\r\n  \"email\": \"{{mail_29}}\",\r\n  \"password\": \"{{pass_29}}\",\r\n  \"repeatPassword\": \"{{pass_29}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/auth/signup",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test SingIn 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 200) {\r",
+							"    pm.test(\"SingIn Ok\", function () {\r",
+							"        var jsonData = pm.response.json();\r",
+							"        // console.log(jsonData.data.userId);\r",
+							"        pm.expect(jsonData.status).to.eql('ok');\r",
+							"    })\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"{{mail_29}}\",\r\n  \"password\": \"{{pass_29}}\",\r\n  \"remember\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/auth/signin",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test SingIn 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 400) {\r",
+							"    pm.test(\"Email error\", function () {\r",
+							"        var jsonData = pm.response.json();\r",
+							"        // console.log(jsonData.data.userId);\r",
+							"        pm.expect(jsonData.status).to.eql('error');\r",
+							"    })\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"annavolkovaukr.net\",\r\n  \"password\": \"{{pass_29}}\",\r\n  \"remember\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/auth/signin",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test ChangeDist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 200) {\r",
+							"    pm.test(\"ChangeDist Ok\", function () {\r",
+							"        var jsonData = pm.response.json();\r",
+							"        // console.log(jsonData.data.userId);\r",
+							"        pm.expect(jsonData.status).to.eql('ok');\r",
+							"    })\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"currency\": \"usd\",\r\n  \"distanceUnits\": \"ml\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/users/settings",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"users",
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test ChangeName 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 200) {\r",
+							"    pm.test(\"ChangeName Ok\", function () {\r",
+							"        var jsonData = pm.response.json();\r",
+							"        // console.log(jsonData.data.userId);\r",
+							"        pm.expect(jsonData.status).to.eql('ok');\r",
+							"    })\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"photo\": \"user-1621352948859.jpg\",\r\n  \"name\": \"Ann\",\r\n  \"lastName\": \"Su\",\r\n  \"dateBirth\": \"2021-03-17T15:21:05.000Z\",\r\n  \"country\": \"Ukraine\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/users/profile",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test AddCar 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 201) {\r",
+							"    pm.test(\"AddCar Ok\", function () {\r",
+							"        pm.expect(jsonData.status).to.eql('ok');\r",
+							"    })\r",
+							"    pm.collectionVariables.set('carID_29',jsonData.data.id)\r",
+							"    }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carBrandId\": 1,\r\n  \"carModelId\": 2,\r\n  \"mileage\": 200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/cars",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test AddCar 400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 400) {\r",
+							"  \r",
+							"    pm.test(\"AddCar\", function () {\r",
+							"        var jsonData = pm.response.json();\r",
+							"        // console.log(jsonData.data.userId);\r",
+							"        pm.expect(jsonData.status).to.eql('error');\r",
+							"    });\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"carModelId\": 300,\r\n  \"mileage\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/cars",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test ChangeDist 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 200) {\r",
+							"    pm.test(\"ChangeDist Ok\", function () {\r",
+							"        pm.expect(jsonData.status).to.eql('ok');\r",
+							"    })\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"mileage\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/cars/{{carID_29}}",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"cars",
+						"{{carID_29}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test CreateExp 201",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 200) {\r",
+							"    pm.test(\"CreateExpenses Ok\", function () {\r",
+							"        pm.expect(jsonData.status).to.eql('ok');\r",
+							"    })\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"carId\": {{carID_29}},\r\n    \"reportedAt\": \"2023-06-19\",\r\n    \"mileage\": 60,\r\n    \"liters\": 6,\r\n    \"totalCost\": 36,\r\n    \"forceMileage\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/expenses",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"expenses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test DeleteUser 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.response.code);\r",
+							"console.log(pm.response.status);\r",
+							"var jsonData = pm.response.json();\r",
+							"if (pm.response.code === 200) {\r",
+							"    pm.test(\"DeleteUser Ok\", function () {\r",
+							"        pm.expect(jsonData.status).to.eql('ok');\r",
+							"    })\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL_29}}/users",
+					"host": [
+						"{{URL_29}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_29",
+			"value": "https://qauto2.forstudy.space/api/",
+			"type": "string"
+		},
+		{
+			"key": "mail_29",
+			"value": "annavolkova599@ukr.net",
+			"type": "string"
+		},
+		{
+			"key": "pass_29",
+			"value": "Gu21021970",
+			"type": "string"
+		},
+		{
+			"key": "carID_29",
+			"value": 98595
+		}
+	]
+}

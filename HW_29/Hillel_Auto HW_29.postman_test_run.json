@@ -1,0 +1,363 @@
+{
+	"id": "05f4f8a1-7905-4296-b444-a3587d586cd9",
+	"name": "Hillel_Auto HW_29",
+	"timestamp": "2023-06-19T11:16:31.859Z",
+	"collection_id": "27172233-f560eac1-1d40-4659-89d5-9e0bf9ac0195",
+	"folder_id": 0,
+	"environment_id": "27172233-397fefbb-f1a2-438a-8ec2-ac8e053d3515",
+	"totalPass": 11,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-19T11:16:27.723Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "540a56b9-1e53-4032-a992-0be8218d8ea0",
+			"name": "Test SignUp 201",
+			"url": "https://qauto2.forstudy.space/api//auth/signup",
+			"time": 1583,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"SingUp Ok": true
+			},
+			"testPassFailCounts": {
+				"SingUp Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1583
+			],
+			"allTests": [
+				{
+					"SingUp Ok": true
+				}
+			]
+		},
+		{
+			"id": "19a021cb-f9eb-4882-9392-801b5b19fa71",
+			"name": "Test SignUp 400",
+			"url": "https://qauto2.forstudy.space/api//auth/signup",
+			"time": 56,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Login error": true
+			},
+			"testPassFailCounts": {
+				"Login error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				56
+			],
+			"allTests": [
+				{
+					"Login error": true
+				}
+			]
+		},
+		{
+			"id": "796a3f97-c3f2-48c8-8520-375b293d4719",
+			"name": "Test SingIn 200",
+			"url": "https://qauto2.forstudy.space/api//auth/signin",
+			"time": 533,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"SingIn Ok": true
+			},
+			"testPassFailCounts": {
+				"SingIn Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				533
+			],
+			"allTests": [
+				{
+					"SingIn Ok": true
+				}
+			]
+		},
+		{
+			"id": "ad0b37df-b809-40b4-9622-8e4cc19175c8",
+			"name": "Test SingIn 400",
+			"url": "https://qauto2.forstudy.space/api//auth/signin",
+			"time": 52,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Email error": true
+			},
+			"testPassFailCounts": {
+				"Email error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				52
+			],
+			"allTests": [
+				{
+					"Email error": true
+				}
+			]
+		},
+		{
+			"id": "a9649c3b-ed9a-401b-89e4-23270081ca62",
+			"name": "Test ChangeDist",
+			"url": "https://qauto2.forstudy.space/api//users/settings",
+			"time": 60,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"ChangeDist Ok": true
+			},
+			"testPassFailCounts": {
+				"ChangeDist Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				60
+			],
+			"allTests": [
+				{
+					"ChangeDist Ok": true
+				}
+			]
+		},
+		{
+			"id": "e2b3281e-578d-4f9d-8b4e-4b71debb80df",
+			"name": "Test ChangeName 200",
+			"url": "https://qauto2.forstudy.space/api//users/profile",
+			"time": 56,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"ChangeName Ok": true
+			},
+			"testPassFailCounts": {
+				"ChangeName Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				56
+			],
+			"allTests": [
+				{
+					"ChangeName Ok": true
+				}
+			]
+		},
+		{
+			"id": "5626e35d-9f42-43be-85ef-91abcf962f01",
+			"name": "Test AddCar 201",
+			"url": "https://qauto2.forstudy.space/api//cars",
+			"time": 60,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"AddCar Ok": true
+			},
+			"testPassFailCounts": {
+				"AddCar Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				60
+			],
+			"allTests": [
+				{
+					"AddCar Ok": true
+				}
+			]
+		},
+		{
+			"id": "0a997871-13d6-43ed-afd1-762fa8a4d507",
+			"name": "Test AddCar 400",
+			"url": "https://qauto2.forstudy.space/api//cars",
+			"time": 53,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"AddCar": true
+			},
+			"testPassFailCounts": {
+				"AddCar": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				53
+			],
+			"allTests": [
+				{
+					"AddCar": true
+				}
+			]
+		},
+		{
+			"id": "d0ae49a8-e60c-4941-9a45-d735bf466127",
+			"name": "Test ChangeDist 200",
+			"url": "https://qauto2.forstudy.space/api//cars/98599",
+			"time": 69,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"ChangeDist Ok": true
+			},
+			"testPassFailCounts": {
+				"ChangeDist Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				69
+			],
+			"allTests": [
+				{
+					"ChangeDist Ok": true
+				}
+			]
+		},
+		{
+			"id": "d1ba7447-daff-4a90-b835-8b893d7f4132",
+			"name": "Test CreateExp 201",
+			"url": "https://qauto2.forstudy.space/api//expenses",
+			"time": 68,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"CreateExpenses Ok": true
+			},
+			"testPassFailCounts": {
+				"CreateExpenses Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				68
+			],
+			"allTests": [
+				{
+					"CreateExpenses Ok": true
+				}
+			]
+		},
+		{
+			"id": "cbeddaef-9666-4cf6-8e14-7b40bd17bc5e",
+			"name": "Test DeleteUser 200",
+			"url": "https://qauto2.forstudy.space/api//users",
+			"time": 57,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"DeleteUser Ok": true
+			},
+			"testPassFailCounts": {
+				"DeleteUser Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				57
+			],
+			"allTests": [
+				{
+					"DeleteUser Ok": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2647,
+	"collection": {
+		"requests": [
+			{
+				"id": "540a56b9-1e53-4032-a992-0be8218d8ea0",
+				"method": "POST"
+			},
+			{
+				"id": "19a021cb-f9eb-4882-9392-801b5b19fa71",
+				"method": "POST"
+			},
+			{
+				"id": "796a3f97-c3f2-48c8-8520-375b293d4719",
+				"method": "POST"
+			},
+			{
+				"id": "ad0b37df-b809-40b4-9622-8e4cc19175c8",
+				"method": "POST"
+			},
+			{
+				"id": "a9649c3b-ed9a-401b-89e4-23270081ca62",
+				"method": "PUT"
+			},
+			{
+				"id": "e2b3281e-578d-4f9d-8b4e-4b71debb80df",
+				"method": "PUT"
+			},
+			{
+				"id": "5626e35d-9f42-43be-85ef-91abcf962f01",
+				"method": "POST"
+			},
+			{
+				"id": "0a997871-13d6-43ed-afd1-762fa8a4d507",
+				"method": "POST"
+			},
+			{
+				"id": "d0ae49a8-e60c-4941-9a45-d735bf466127",
+				"method": "PUT"
+			},
+			{
+				"id": "d1ba7447-daff-4a90-b835-8b893d7f4132",
+				"method": "POST"
+			},
+			{
+				"id": "cbeddaef-9666-4cf6-8e14-7b40bd17bc5e",
+				"method": "DELETE"
+			}
+		]
+	}
+}
