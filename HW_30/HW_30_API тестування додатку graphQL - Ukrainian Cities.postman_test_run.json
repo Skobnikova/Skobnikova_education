@@ -1,0 +1,239 @@
+{
+	"id": "60f21ee1-6ba1-4f4b-8213-08f85711f2df",
+	"name": "HW_30_API тестування додатку graphQL - Ukrainian Cities",
+	"timestamp": "2023-06-26T13:09:14.305Z",
+	"collection_id": "27172233-f7161b9e-10d4-4eb7-b49f-821e72540e92",
+	"folder_id": 0,
+	"environment_id": "27172233-397fefbb-f1a2-438a-8ec2-ac8e053d3515",
+	"totalPass": 7,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-26T13:09:12.855Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "3ea0dc1d-4965-4a24-8050-4a6a31cf2ab9",
+			"name": "Get_AllCities",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 198,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				198
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "590f8de3-0e42-49a0-bb2d-a2307e35cbd1",
+			"name": "Get_City_byID",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 52,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 300ms": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				52
+			],
+			"allTests": [
+				{
+					"Response time is less than 300ms": true
+				}
+			]
+		},
+		{
+			"id": "47a8889a-3e32-412f-a429-a07e1e15edb1",
+			"name": "Get_Cities_byRange",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 57,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"city_byRange": true
+			},
+			"testPassFailCounts": {
+				"city_byRange": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				57
+			],
+			"allTests": [
+				{
+					"city_byRange": true
+				}
+			]
+		},
+		{
+			"id": "952bfb06-70ec-4b8e-af93-5a4f495d7eb3",
+			"name": "Get_City_byID_Alias_descriptions",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 64,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"description": true
+			},
+			"testPassFailCounts": {
+				"description": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				64
+			],
+			"allTests": [
+				{
+					"description": true
+				}
+			]
+		},
+		{
+			"id": "0d5b01af-88e1-49df-a554-7ced2ae4f886",
+			"name": "Add_City",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 49,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Add_City Ok": true
+			},
+			"testPassFailCounts": {
+				"Add_City Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Add_City Ok": true
+				}
+			]
+		},
+		{
+			"id": "39ad97f5-7f5a-4334-8e80-6e20b8e56300",
+			"name": "Update_City",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 47,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Update_City Ok": true
+			},
+			"testPassFailCounts": {
+				"Update_City Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Update_City Ok": true
+				}
+			]
+		},
+		{
+			"id": "b133f451-91dc-4f26-9f38-86fa581cef8a",
+			"name": "DeketeCity",
+			"url": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Delete_city Ok": true
+			},
+			"testPassFailCounts": {
+				"Delete_city Ok": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Delete_city Ok": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 515,
+	"collection": {
+		"requests": [
+			{
+				"id": "3ea0dc1d-4965-4a24-8050-4a6a31cf2ab9",
+				"method": "POST"
+			},
+			{
+				"id": "590f8de3-0e42-49a0-bb2d-a2307e35cbd1",
+				"method": "POST"
+			},
+			{
+				"id": "47a8889a-3e32-412f-a429-a07e1e15edb1",
+				"method": "POST"
+			},
+			{
+				"id": "952bfb06-70ec-4b8e-af93-5a4f495d7eb3",
+				"method": "POST"
+			},
+			{
+				"id": "0d5b01af-88e1-49df-a554-7ced2ae4f886",
+				"method": "POST"
+			},
+			{
+				"id": "39ad97f5-7f5a-4334-8e80-6e20b8e56300",
+				"method": "POST"
+			},
+			{
+				"id": "b133f451-91dc-4f26-9f38-86fa581cef8a",
+				"method": "POST"
+			}
+		]
+	}
+}

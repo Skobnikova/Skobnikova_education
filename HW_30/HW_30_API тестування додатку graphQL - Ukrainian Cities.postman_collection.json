@@ -1,0 +1,286 @@
+{
+	"info": {
+		"_postman_id": "f7161b9e-10d4-4eb7-b49f-821e72540e92",
+		"name": "HW_30_API тестування додатку graphQL - Ukrainian Cities",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27172233",
+		"_collection_link": "https://grey-resonance-658637.postman.co/workspace/Angel-Team-Workspace~7dd6feec-21c3-44e6-8c2b-569603e5d074/collection/27172233-f7161b9e-10d4-4eb7-b49f-821e72540e92?action=share&creator=27172233&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get_AllCities",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  getAllCities{\r\n    id\r\n    name\r\n    square\r\n    ... on City{\r\n        description\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{url_UA_city}}",
+					"host": [
+						"{{url_UA_city}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_City_byID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if (pm.response.code === 200) \r",
+							"pm.test(\"Response time is less than 300ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(300);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  getCityById(id:12){\r\n    id\r\n    name\r\n    square\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{url_UA_city}}",
+					"host": [
+						"{{url_UA_city}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_Cities_byRange",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if (pm.response.code === 200) \r",
+							"pm.test(\"city_byRange\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Черкаси\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  getCityByRangeId(filter:{minId:7, maxId:25}){\r\n    id\r\n    name\r\n    square\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{url_UA_city}}",
+					"host": [
+						"{{url_UA_city}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_City_byID_Alias_descriptions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if (pm.response.code === 200) \r",
+							"pm.test(\"description\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"найглибша станція метро в світі\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\r\n  city1:getCityById(id:7){\r\n    ... CityDetails\r\n  }\r\n  city2:getCityById(id:12){\r\n    ... CityDetails\r\n  }\r\n}\r\n\r\nfragment CityDetails on City{\r\n    id\r\n    name\r\ndescription\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{url_UA_city}}",
+					"host": [
+						"{{url_UA_city}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_City",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Add_City Ok\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Angel\");\r",
+							"});\r",
+							"pm.collectionVariables.set('city_ID26')\r",
+							"    "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n    addCity(name:\"Angel\",square: 550.0,description:\"Nice\"){\r\n    id\r\n    name\r\n    square \r\n    ... on City{\r\n      description\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{url_UA_city}}",
+					"host": [
+						"{{url_UA_city}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_City",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Update_City Ok\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"NiceNice\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n \tupdateCity(id:3,name:\"Angel\",square:550.0,description:\"NiceNice\"){\r\n     id\r\n    name\r\n    square\r\n    ... on City{\r\n      description\r\n    }\r\n  }\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{url_UA_city}}",
+					"host": [
+						"{{url_UA_city}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeketeCity",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Delete_city Ok\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation{\r\n \tdeleteCity(id:26)\r\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "{{url_UA_city}}",
+					"host": [
+						"{{url_UA_city}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url_UA_city",
+			"value": "https://graphql-ukrainian-cities.hillel.it/graphql",
+			"type": "string"
+		},
+		{
+			"key": "city_ID26",
+			"value": "26"
+		}
+	]
+}
